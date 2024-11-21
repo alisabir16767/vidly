@@ -9,6 +9,7 @@ import LoginForm from './components/login';
 import RegisterForm from './components/register';
 import NewMovie from './components/addnewmovie';
 import "./App.css";
+import MovieForms from './components/movieForm';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       <Navbar/>
     <main className="container">
       <Routes>
-      <Route path="/new" element={<NewMovie/>}></Route>
+      <Route path="/movies/:id" element={<MovieForms />} />
       <Route path="/register" element={<RegisterForm/>}></Route>
         <Route path="/login" element={<LoginForm/>}></Route>
         <Route path="/movies" element={<Movies />} />
